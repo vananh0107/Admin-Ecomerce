@@ -35,10 +35,9 @@ const Login = () => {
   }
   return (
     <div className="py-5" style={{ background: '#ffd333', minHeight: '100vh' }}>
-      <br />
-      <br />
-      <br />
-      <br />
+      <br/>
+      <h2 className='text-center'>Email to test: tuananh13022020@gmail.com</h2>
+      <h2 className='text-center'>Password to test: 123456</h2>
       <div className="my-5 w-25 bg-white rounded-3 mx-auto p-3">
         <h6 className="text-center">Login</h6>
         <p className="text-center">Login to your account to continue</p>

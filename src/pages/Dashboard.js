@@ -47,23 +47,23 @@ const Dashboard = () => {
     dispatch(getMonthOrder());
     dispatch(getYearOrder());
   }, []);
+  const arrayMonth = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
   useEffect(() => {
     let dataIncome = [];
     let dataOrder = [];
-    const arrayMonth = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December',
-    ];
     for (let index = 0; index < monthTotalData?.length; index++) {
       const element = monthTotalData[index];
       dataIncome.push({
@@ -97,9 +97,9 @@ const Dashboard = () => {
           </div>
           <div className="d-flex flex-column align-items-end">
             <h6 className="green mx-2">
-              <BsArrowUpRight /> 32%
+              <BsArrowUpRight /> 16%
             </h6>
-            <p>Compare to April 2022</p>
+            <p>Compare to {arrayMonth[(new Date()).getMonth()]} {new Date().getFullYear()}</p>
           </div>
         </div>
         <div className="d-flex justify-content-between align-items-end flex-grow-1 bg-white p-4 rounded-3">
@@ -111,9 +111,9 @@ const Dashboard = () => {
           </div>
           <div className="d-flex flex-column align-items-end">
             <h6 className="red mx-2">
-              <BsArrowDownRight /> 32%
+              <BsArrowDownRight /> 29%
             </h6>
-            <p>Compare to April 2022</p>
+            <p>Compare to {arrayMonth[(new Date()).getMonth()]} {new Date().getFullYear()}</p>
           </div>
         </div>
         <div
@@ -130,7 +130,7 @@ const Dashboard = () => {
             <h6 className="green mx-2">
               <BsArrowUpRight /> 32%
             </h6>
-            <p>Compare to April 2022</p>
+            <p>Compare to {arrayMonth[(new Date()).getMonth()]} {new Date().getFullYear()}</p>
           </div>
         </div>
       </div>

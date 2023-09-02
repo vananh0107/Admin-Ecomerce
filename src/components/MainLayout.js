@@ -31,8 +31,9 @@ const MainLayout = () => {
     dispatch(resetState());
     setTimeout(() => {
       navigate('/');
-    }, 1000);
+    }, 500);
   };
+  const info=JSON.parse(localStorage.getItem('user'))
   return (
     <Layout className="layout">
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -186,12 +187,6 @@ const MainLayout = () => {
             }}
           />
           <div className="d-flex gap-3 align-items-center">
-            <div className="position-relative mx-3">
-              <GrNotification className="fs-5" />
-              <span className="badge bg-warning rounded-circle p-1 position-absolute">
-                3
-              </span>
-            </div>
             <div className="">
               <div class="dropdown">
                 <div
@@ -209,8 +204,8 @@ const MainLayout = () => {
                     />
                   </div>
                   <div>
-                    <h5 className="mb-0">Vanhdev</h5>
-                    <p className="mb-0">vanhdev@gmail.com</p>
+                    <h5 className="mb-0">{info.firstname+' '+info.lastname}</h5>
+                    <p className="mb-0">{info.email}</p>
                   </div>
                 </div>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
